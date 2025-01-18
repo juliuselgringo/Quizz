@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz à partir d'un fichrier Json</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+</head>
+<body>
+    <script id="quizz-data" type="application/json">
+        {
+    "questions": [
+    {
+        "question": "Que signifie W3C?",
+        "options": [
+        "A) Habitation avec 3 WC.",
+        "B) World Wide Wrestling company",
+        "C) World Wide Web Consortium",
+        "D) Where? Who? Why? C?"
+        ],
+        "correct_answer": "C)"
+    },
+    {
+        "question": "Qui a inventé le World Wide Web?",
+        "options": [
+        "A) Steve Jobs",
+        "B) Tim Berners-Lee",
+        "C) Bill Gates",
+        "D) Mark Zuckerberg"
+        ],
+        "correct_answer": "B)"
+    },
+    {
+        "question": "Quel langage de programmation est souvent utilisé pour le développement web côté client?",
+        "options": [
+        "A) JavaScript",
+        "B) Java",
+        "C) Python",
+        "D) C++"
+        ],
+        "correct_answer": "A)"
+    },
+    {
+        "question": "Quelle entreprise a développé le système d'exploitation Android?",
+        "options": [
+        "A) Apple",
+        "B) Microsoft",
+        "C) Samsung",
+        "D) Google"
+        ],
+        "correct_answer": "D)"
+    },
+    {
+        "question": "Quel est le principal composant matériel d'un ordinateur qui exécute les instructions des programmes?",
+        "options": [
+        "A) Disque dur",
+        "B) Carte mère",
+        "C) Processeur (CPU)",
+        "D) Carte graphique"
+        ],
+        "correct_answer": "C)"
+    },
+    {
+        "question": "Quel est le langage de programmation utilisé pour développer des applications iOS?",
+        "options": [
+        "A) Swift",
+        "B) Kotlin",
+        "C) Ruby",
+        "D) PHP"
+        ],
+        "correct_answer": "A)"
+    },
+    {
+        "question": "Quel est le format de fichier couramment utilisé pour les feuilles de calcul?",
+        "options": [
+        "A) .docx",
+        "B) .pdf",
+        "C) .xlsx",
+        "D) .txt"
+        ],
+        "correct_answer": "C)"
+    },
+    {
+        "question": "Quel est le nom du premier ordinateur personnel commercialisé par Apple?",
+        "options": [
+        "A) Macintosh",
+        "B) Apple II",
+        "C) iMac",
+        "D) Lisa"
+        ],
+        "correct_answer": "B)"
+    }
+    ]
+}
+  
+    </script>
+    <main>
+        <div class="tableauScore">
+            <h2 display="inline">Votre score : <span class="score" id="score" display="inline"></span></h2>
+        </div>
+        <div class="question" id="affQ"></div>
+        <div class="reponseA"><button class="reponse" id="A" value="A)">A</button></div>
+        <div class="reponseB"><button class="reponse" id="B" value="B)">B</button></div>
+        <div class="reponseC"><button class="reponse" id="C" value="C)">C</button></div>
+        <div class="reponseD"><button class="reponse" id="D" value="D)">D</button></div>
+        <div class="finPartie" id="finPartie"></div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
