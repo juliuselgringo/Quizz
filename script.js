@@ -11,10 +11,10 @@ affScore.textContent = score + "/" + numeroQ;
 let affQ = document.getElementById("affQ");
 
 //constantes affichage reponses
-let affRA = document.getElementById("A");
-let affRB = document.getElementById("B");
-let affRC = document.getElementById("C");
-let affRD = document.getElementById("D");
+let reponseA = document.createElement("button");
+let reponseB = document.createElement("button");
+let reponseC = document.createElement("button");
+let reponseD = document.createElement("button");
 
 //--------------------------------------------------------------------------------
 
@@ -33,14 +33,25 @@ function scriptQuizz(){
 
     // affichage reponsesX
     let reponsesX = questionObjX.options;
-    let reponseA = reponsesX[0];
-    let reponseB = reponsesX[1];
-    let reponseC = reponsesX[2];
-    let reponseD = reponsesX[3];
-    affRA.textContent = reponseA;
-    affRB.textContent = reponseB;
-    affRC.textContent = reponseC;
-    affRD.textContent = reponseD;
+    reponseA.textContent= reponsesX[0];
+    reponseA.value = "A)";
+    reponseA.style.display = "block";
+    affReponses.append(reponseA);
+
+    reponseB.textContent = reponsesX[1];
+    reponseB.value = "B)";
+    reponseB.style.display = "block";
+    affReponses.append(reponseB);
+    
+    reponseC.textContent = reponsesX[2];
+    reponseC.value="C)";
+    reponseC.style.display = "block";
+    affReponses.append(reponseC);
+
+    reponseD.textContent = reponsesX[3];
+    reponseD.value = "D)";
+    reponseD.style.display = "block";
+    affReponses.append(reponseD);
 }
 
 // Evenement Click
@@ -71,10 +82,7 @@ function verifFin(){
 // fonction fin  de partie
 function fctFinPartie(){
     affQ.textContent ="";
-    affRA.textContent="";
-    affRB.textContent="";
-    affRC.textContent="";
-    affRD.textContent="";
+
     let finPartie = document.getElementById("finPartie")
     finPartie.textContent = "La partie est finnie votre score est de: " + score + "/" + numeroQ++;
 }
