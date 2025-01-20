@@ -10,7 +10,10 @@ affScore.textContent = score + "/" + numeroQ;
 //constante affichage question
 let affQ = document.getElementById("affQ");
 
-//constantes affichage reponses
+//constante affichage reponses
+let affReponses = document.getElementById("affReponses")
+
+//constantes creation boutons reponses
 let reponseA = document.createElement("button");
 let reponseB = document.createElement("button");
 let reponseC = document.createElement("button");
@@ -55,7 +58,7 @@ function scriptQuizz(){
 }
 
 // Evenement Click
-let tableauButton = [affRA, affRB, affRC, affRD];
+let tableauButton = [reponseA, reponseB, reponseC, reponseD];
 tableauButton.forEach((rep, index) =>{
     rep.addEventListener("click", () => {
         rep.value === questionObjX.correct_answer
@@ -81,8 +84,8 @@ function verifFin(){
 
 // fonction fin  de partie
 function fctFinPartie(){
-    affQ.textContent ="";
-
+    affQ.innerHTML ="";
+    affReponses.innerHTML = "";
     let finPartie = document.getElementById("finPartie")
     finPartie.textContent = "La partie est finnie votre score est de: " + score + "/" + numeroQ++;
 }
