@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizz à partir d'un fichrier Json</title>
+    <title>Quizz à partir d'un fichier Json</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <script id="quizz-data" type="application/json">
@@ -95,12 +96,21 @@
   
     </script>
     <main>
-        <div class="tableauScore">
-            <h2 display="inline">Votre score : <span class="score" id="score" display="inline"></span></h2>
-        </div>
         <div class="question" id="affQ"></div>
         <div class="affReponses" id="affReponses"></div>
         <div class="finPartie" id="finPartie"></div>
+        <div class="tableauScore">
+            <h2 display="inline">Votre score : <span class="score" id="score" display="inline"></span></h2>
+            <div class="teteToto">
+                <div class="oeilG"></div>
+                <div class="oeilD"></div>
+                <div class="nez">
+                    +
+                </div>
+                <div class="bouche"></div>
+            </div>
+            
+        </div>
     </main>
 
     <script src="script.js"></script>

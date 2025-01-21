@@ -87,7 +87,7 @@ function fctFinPartie(){
     affQ.innerHTML ="";
     affReponses.innerHTML = "";
     let finPartie = document.getElementById("finPartie")
-    finPartie.textContent = "La partie est finnie votre score est de: " + score + "/" + numeroQ++;
+    finPartie.textContent = "La partie est finnie.";
 }
 
 scriptQuizz();

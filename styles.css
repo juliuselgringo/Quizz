@@ -1,0 +1,94 @@
+body{
+    background-color: grey;
+    margin: auto;
+    text-align:center;
+    font-size: 30px;
+}
+
+.question{
+    margin-top: 10vw;
+}
+
+.affReponses{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+button{
+    width:500px;
+    border: 5px groove black;
+    margin:auto;
+    margin-top: 20px;
+    font-size: 25px;
+
+}
+
+button:hover{
+    transform: scaleY(0.9);
+    background-color: black;
+    color: white;
+}
+
+button:active{
+    transform: translate(1px);
+}
+
+.oeilG, .oeilD, .bouche{
+    border:1px solid black;
+    width:40px;
+    height:40px;
+    border-radius: 100%;
+    position:absolute;
+    top: 10vh;
+    left: 5vw;
+}
+
+.oeilD{
+    left: 15vw;
+}
+
+.bouche{
+    width:100px;
+    height: 30px;
+    border-radius: 0;
+    border-left: transparent;
+    border-right: transparent;
+    top: 25vh;
+    left: 8vw;
+}
+
+.nez{
+    display: flex;
+    flex-direction: row;
+    width: 44px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 17vh;
+    left: 11vw;
+}
+
+.teteToto{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 100%;
+    position: absolute;
+    left: 40vw;
+
+}
+
+.teteToto, .oeilG, .oeilD, .nez div, .bouche{
+    border-color: transparent;
+    color: transparent;
+}
+
+
+.teteToto:hover{
+    .oeilG, .oeilD, .bouche, .nez{
+        border-color: black;
+        color: black;
+    }
+    
+}
+
